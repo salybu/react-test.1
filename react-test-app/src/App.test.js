@@ -37,3 +37,9 @@ test("When the - button is pressed, the counter changes to -1", () => {
   const counterElement = screen.getByTestId("counter");
   expect(counterElement).toHaveTextContent(-1);
 });
+
+test("on/off button has blue color", () => {
+  render(<App />);
+  const btnElement = screen.getByTestId("on/off-button");
+  expect(btnElement).toHaveStyle({ backgroundColor: "blue" }); // btn 이 파란색을 가졌는지? matcher 는 toHaveTextContent
+});
